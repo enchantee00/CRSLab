@@ -166,7 +166,6 @@ class TGReDialSystem(BaseSystem):
             raise
 
     def train_recommender(self):
-        breakpoint()
         if hasattr(self.rec_model, 'bert'):
             if os.environ["CUDA_VISIBLE_DEVICES"] == '-1':
                 bert_param = list(self.rec_model.bert.named_parameters())
